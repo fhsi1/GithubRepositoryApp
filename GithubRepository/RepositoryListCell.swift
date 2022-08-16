@@ -9,7 +9,7 @@ import SnapKit
 import UIKit
 
 final class RepositoryListCell: UITableViewCell {
-    private var repository: Repository?
+    var repository: Repository?
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()

@@ -17,7 +17,7 @@ class RepositoryListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = organization + "Repositories"
+        title = organization + " Repositories"
         
         refreshControl = UIRefreshControl()
         let refreshControl = refreshControl
@@ -90,11 +90,24 @@ class RepositoryListViewController: UITableViewController {
 // UITableView DataSource, Delegate
 extension RepositoryListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        do {
+            return try reposigories.value().count
+        } catch {
+            return 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryListCell", for: indexPath) as? RepositoryListCell else { return UITableViewCell() }
+        
+        var currentRepo: Repository? {
+            do {
+                return try reposigories.value()[indexPath.row]
+            } catch {
+                return nil
+            }
+        }
+        cell.repository = currentRepo
         
         return cell
     }
