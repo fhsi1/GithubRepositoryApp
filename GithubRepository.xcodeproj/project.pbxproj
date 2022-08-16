@@ -10,6 +10,7 @@
 		102CE09928ABB23E0031332C /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102CE09828ABB23E0031332C /* RepositoryListViewController.swift */; };
 		102CE09B28ABB35D0031332C /* RepositoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102CE09A28ABB35D0031332C /* RepositoryListCell.swift */; };
 		102CE09E28ABB3CD0031332C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 102CE09D28ABB3CD0031332C /* SnapKit */; };
+		102CE0A028ABBAF80031332C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102CE09F28ABBAF80031332C /* Repository.swift */; };
 		1042182828A6B95500C646E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042182728A6B95500C646E6 /* AppDelegate.swift */; };
 		1042182A28A6B95500C646E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042182928A6B95500C646E6 /* SceneDelegate.swift */; };
 		1042183128A6B95700C646E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1042183028A6B95700C646E6 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		102CE09828ABB23E0031332C /* RepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
 		102CE09A28ABB35D0031332C /* RepositoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListCell.swift; sourceTree = "<group>"; };
+		102CE09F28ABBAF80031332C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		1042182428A6B95500C646E6 /* GithubRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1042182728A6B95500C646E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1042182928A6B95500C646E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			children = (
 				1042182728A6B95500C646E6 /* AppDelegate.swift */,
 				1042182928A6B95500C646E6 /* SceneDelegate.swift */,
+				102CE09F28ABBAF80031332C /* Repository.swift */,
 				102CE09828ABB23E0031332C /* RepositoryListViewController.swift */,
 				102CE09A28ABB35D0031332C /* RepositoryListCell.swift */,
 				1042183028A6B95700C646E6 /* Assets.xcassets */,
@@ -215,6 +218,7 @@
 			files = (
 				1042182828A6B95500C646E6 /* AppDelegate.swift in Sources */,
 				1042182A28A6B95500C646E6 /* SceneDelegate.swift in Sources */,
+				102CE0A028ABBAF80031332C /* Repository.swift in Sources */,
 				102CE09928ABB23E0031332C /* RepositoryListViewController.swift in Sources */,
 				102CE09B28ABB35D0031332C /* RepositoryListCell.swift in Sources */,
 			);
