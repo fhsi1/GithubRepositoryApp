@@ -5,8 +5,42 @@
 //  Created by Yujean Cho on 2022/08/16.
 //
 
+import SnapKit
 import UIKit
 
-final class RepositoryListViewController: UITableViewController {
+class RepositoryListViewController: UITableViewController {
+    private let organization = "Apple"
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        title = organization + "Repositories"
+        
+        refreshControl = UIRefreshControl()
+        let refreshControl = refreshControl
+        refreshControl?.backgroundColor = .white
+        refreshControl?.tintColor = .darkGray
+        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to Refresh")
+        refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        
+        tableView.register(RepositoryListCell.self, forCellReuseIdentifier: "RepositoryListCell")
+        tableView.rowHeight = 140
+    }
+    
+    @objc func refresh() {
+        
+    }
+}
+
+// UITableView DataSource, Delegate
+extension RepositoryListViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryListCell", for: indexPath) as? RepositoryListCell else { return UITableViewCell() }
+        
+        return cell
+    }
 }
